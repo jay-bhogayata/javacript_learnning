@@ -6,9 +6,12 @@ var user = {
     facebookSingedIn : true,
 };
 
+
+
 console.log(user.fierstName);
 console.log(user["lastName"]); // get in mind plz
 
-user.loginCount = 89
+user.loginCount = 89;
+user.facebookSingedIn = false
 console.log(user);
-console.table(user)
+console.table(user);

@@ -8,4 +8,4 @@
 // type conversion
 console.log("2"  + 2);
 
-// == vs ===    (cohersion)
+// == vs ===    
