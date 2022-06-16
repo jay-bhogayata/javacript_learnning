@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="joke">
+        <h1 class="j"></h1>
+    </div>
+    <script>
+        fetch("https://api.chucknorris.io/jokes/random")
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                // console.log("DATA is :", data);
+                var joke = data.value;
+                console.log("JOKE:", joke);
+                let div = document.querySelector(".j");
+                div.innerText = joke;
+            })
+            .catch();
+    </script>
+</body>
+
+</html>

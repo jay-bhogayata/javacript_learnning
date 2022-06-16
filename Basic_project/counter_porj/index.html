@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Javascript | Counter</title>
+</head>
+<body class="text-white ">
+    <div class="my-auto flex flex-col mt-10 lg:w-1/3 bg-pink-500 mx-auto border-4 mt-44 border-gray-800 rounded-3xl ">
+        <h1 class="mx-auto text-3xl mt-5 font-semibold text-black">Javascript Counter</h1>
+        <p class="mx-auto text-3xl mt-6  count text-black font-bold">0</p>
+
+        <button class="bg-indigo-600 text-black text-2xl lg:w-1/2  md:w-1/2  sm: w-1/2 mx-auto mt-5 rounded-lg inc font-semibold p-2 border-2">Increase</button>
+        
+        <button class="bg-indigo-600 text-black text-2xl lg:w-1/2 md:w-1/2  sm: w-1/2 mx-auto mt-5 rounded-lg dec font-semibold p-2 border-2">Decrease</button>
+        
+        <button class="bg-indigo-600 text-black text-2xl lg:w-1/2 md:w-1/2 sm: w-1/2 mx-auto mt-5 rounded-lg rest font-semibold p-2 mb-5 border-2">Reset counter</button>
+        
+        
+    </div>
+    <script>
+        let counter = document.querySelector('.count');
+        let inc = document.querySelector('.inc');
+        let dec = document.querySelector('.dec');
+        let rest = document.querySelector('.rest');
+
+        let count = 0;
+
+        update();
+
+        inc.addEventListener("click" , ()=>{
+            count++;
+            update();
+        })
+
+
+        dec.addEventListener("click" , ()=>{
+            if(count>0){
+            count--;
+            }
+            update();
+        })
+
+        rest.addEventListener("click", ()=>{
+            count = 0
+            update(); 
+        })
+
+
+
+        function update(){
+            counter.innerHTML = count;
+        }
+       
+
+    </script>
+</body>
+</html>
