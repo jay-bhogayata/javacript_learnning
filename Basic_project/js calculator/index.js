@@ -1,39 +1,42 @@
-let equal = document.querySelector("[data-equal]");
-let numButton = document.querySelectorAll("[data-num]");
-let inputBox = document.querySelector(".input");
-let operator = document.querySelectorAll("[data-op]");
-let ac = document.querySelector("[data-ac]");
-let del = document.querySelector("[data-del]");
+//selects nums ,  oprad , = , ac ,del and ipbox using custom data attribute and class
+let numBtns = document.querySelectorAll("[data-num]");
+let opradBtns = document.querySelectorAll("[data-op]");
+let equalBtn = document.querySelector("[data-equal]");
+let ipBox = document.querySelector(".input");
+let acBtn = document.querySelector("[data-ac]");
+let delBtn = document.querySelector("[data-del]");
 
-for (let i = 0; i < numButton.length; i++) {
-  document.querySelectorAll("[data-num]")[i].addEventListener("click", (e) => {
-    // console.log(e.target.innerText);
-    let num = e.target.innerText;
-    inputBox.value += num;
-  });
+//add event listners
+for (let index = 0; index < numBtns.length; index++) {
+  document
+    .querySelectorAll("[data-num]")
+    [index].addEventListener("click", (e) => {
+      let number = e.target.innerText;
+
+      ipBox.value += number;
+    });
 }
 
-for (let i = 0; i < operator.length; i++) {
-  document.querySelectorAll("[data-op]")[i].addEventListener("click", (e) => {
-    // console.log(e.target.innerText);
-    let op = e.target.innerText;
-    inputBox.value += op;
-  });
+for (let index = 0; index < opradBtns.length; index++) {
+  document
+    .querySelectorAll("[data-op]")
+    [index].addEventListener("click", (e) => {
+      let op = e.target.innerText;
+
+      ipBox.value += op;
+    });
 }
 
-
-equal.addEventListener("click", () => {
-  let result = eval(inputBox.value);
-  inputBox.value = result;
-  console.log(result);
+equalBtn.addEventListener("click", () => {
+  let ans = eval(ipBox.value);
+  ipBox.value = ans;
 });
 
-ac.addEventListener("click", () => {
-    inputBox.value = ""
-})
+acBtn.addEventListener("click", () => {
+  ipBox.value = "";
+});
 
-del.addEventListener("click", () => {
-    inputBox.value = inputBox.value.slice(0,-1)
-})
-
-
+delBtn.addEventListener("click", () => {
+  let value = ipBox.value.slice(0, -1);
+  ipBox.value = value;
+});
