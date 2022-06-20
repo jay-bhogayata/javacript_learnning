@@ -29,4 +29,4 @@ function displayTime() {
     sec.innerHTML = secondValue
 }
 
-setInterval(displayTime,1000)
+setInterval(displayTime,100)

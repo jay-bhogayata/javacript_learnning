@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           background:  linear-gradient(to right, rgb(251, 113, 133), rgb(217, 70, 239), rgb(99, 102, 241));
+           font-size: 1.5rem;
+        }
+        .table,.ip{
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;  
+            color:black;
+            
+        }
+       
+        hr{
+            width: 10px;
+        }
+        input{
+            margin: 10px;
+            padding: 10px;
+            border: rgb(217, 70, 239);
+            border-radius: 20px;
+        }
+        button{
+            background-color:cornflowerblue;
+            color: aliceblue;
+            font-size: medium;
+            padding: 8px;
+            
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ip">
+        <h1>Javascript multiplication table generator   </h1>
+        <input type="number" placeholder="Enter start number" class="start" >
+        <input type="number" placeholder="Enter end number" class="end" >
+        <button class="btn">generate tables</button>
+    </div>
+    <div class="main">
+        <div class="table">
+            <ul class=".ul">
+
+            </ul>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
